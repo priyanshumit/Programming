@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xml:lang="en" lang="en">
+<head>
+	<meta charset="UTF-8"/>
+	<title>Caesar cipher (JavaScript)</title>
+	<meta http-equiv="Content-Style-Type" content="text/css"/>
+	<meta http-equiv="Content-Script-Type" content="application/javascript"/>
+	<meta name="viewport" content="width=device-width,initial-scale=1"/>
+	<link rel="stylesheet" href="style.css" type="text/css"/>
+</head>
+
+<body>
+
+<div class="vert-main">
+<div class="horz-main">
+<article>
+<h1>Caesar cipher (JavaScript)</h1>
+<h2>Program</h2>
+<table class="noborder">
+	<tbody>
+		<tr>
+			<td><label for="text">Text:</label></td>
+			<td><textarea id="text" cols="50" rows="10" style="width:40em; height:15em">THE QUICK BROWN FOX JUMPED OVER THE LAZY DOG.</textarea></td>
+		</tr>
+		<tr>
+			<td><label for="shift">Shift:</label></td>
+			<td><input type="number" id="shift" min="0" max="25" step="1" value="13" autocomplete="off" style="width:3em"/></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>
+				<button onclick="app.doCrypt(false);">Encrypt</button>
+				<button onclick="app.doCrypt(true);">Decrypt</button>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<script src="caesar-cipher.js" defer="defer"></script>
+
+<h2>Description</h2>
+<p>This JavaScript application is designed to perform message encryption and decryption using the Caesar cipher. The user must provide an integer as the shift value, which should range from 0 to 25, both inclusive. By default, a shift value of 13 corresponds to the ROT13 cipher. The program ensures that the letter casing remains unchanged during the encryption or decryption process, and any non-letter characters remain unaltered.</p>
+</article>
+</body>
+</html>
